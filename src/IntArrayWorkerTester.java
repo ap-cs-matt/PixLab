@@ -10,10 +10,7 @@ public class IntArrayWorkerTester
     worker.setMatrix(nums);
     System.out.println("This should have all 1's in first row and all 2's in second");
     worker.print();
-    
-    testGetCount();
-    testGetLargest();
-    testGetColTotal();
+
   }
   
   /** Method to test fillPattern1 */
@@ -101,10 +98,10 @@ public class IntArrayWorkerTester
   {
     testSetMatrix();
     testFillPattern1();
-    //testGetCount(); 
+    testGetCount(); //
     testGetTotal();
     testGetTotalNested();
-    //testGetLargest();
-    //testGetColTotal();
+    testGetLargest(); //
+    testGetColTotal(); //
   }
 }

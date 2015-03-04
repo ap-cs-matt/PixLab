@@ -118,14 +118,11 @@ public class IntArrayWorker {
 	public int getColTotal(int num) {
 		int colTotal = 0;
 
-		int numCol = matrix[num].length;
 		int k = 0;
-		while (k < numCol){
-			
-			colTotal += matrix[num][k];
+		while (k < 2){
+			colTotal += matrix[k][num];
 			k++;
 		}
-
 		return colTotal;
 	}
 
