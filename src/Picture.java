@@ -227,8 +227,20 @@ public class Picture extends SimplePicture
   {
     Picture beach = new Picture("beach.jpg");
     beach.explore();
-    beach.zeroBlue();
+    beach.grayscale();
     beach.explore();
   }
+
+public void grayscale() {
+	Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    {
+      for (Pixel pixelObj : rowArray)
+      {
+        pixelObj.setGray(255);
+      }
+    }
+	
+}
   
 } // this } is the end of class Picture, put all new methods before this

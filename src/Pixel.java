@@ -367,4 +367,13 @@ public class Pixel
       " blue=" + getBlue();
   }
 
+public void setGray(int value) {
+	// set the blue value to the corrected value
+    int gray = correctValue(value);
+    
+    // update the pixel value in the picture
+    updatePicture(getAlpha(), getRed(), getGreen(), gray);
+	
+}
+
 }
