@@ -18,9 +18,9 @@ public class Picture extends SimplePicture {
 
 	public static void main(String[] args) {
 		Picture beach = new Picture("beach.jpg");
-		beach.explore();
+		//beach.explore();
 		beach.grayscale();
-		beach.explore();
+		//beach.explore();
 	}
 
 	// /////////////////// constructors //////////////////////////////////
@@ -277,9 +277,29 @@ public class Picture extends SimplePicture {
 		Pixel[][] pixels = this.getPixels2D();
 		for (Pixel[] rowArray : pixels) {
 			for (Pixel pixelObj : rowArray) {
-				pixelObj.setRed(55+ pixelObj.getRed());
-				//pixelObj.setGreen(255- pixelObj.getGreen());
-				//pixelObj.setBlue(pixelObj.getBlue()-100);
+				pixelObj.setGreen(pixelObj.getGreen()-130);
+				pixelObj.setBlue(pixelObj.getBlue()-110);
+				increaseBrightness(pixelObj);
+			}
+		}
+	}
+	
+	public void increaseBrightness(Pixel pixelObj){
+		pixelObj.setGreen((int)(pixelObj.getGreen()*2.9));
+		pixelObj.setBlue((int)(pixelObj.getBlue()*2.9));
+		pixelObj.setRed((int)(pixelObj.getRed()*2.9));
+	}
+	
+	public void mirrorVerticalLeftToRight() {
+		Pixel[][] pixels = this.getPixels2D();
+		Pixel leftPixel = null;
+		Pixel rightPixel = null;
+		int width = pixels[0].length;
+		for (int row = 0; row < pixels.length; row++) {
+			for (int col = 0; col < width / 2; col++) {
+				leftPixel = pixels[row][col];
+				rightPixel = pixels[row][width - 1 - col];
+				rightPixel.setColor(rightPixel.getColor());
 			}
 		}
 	}
