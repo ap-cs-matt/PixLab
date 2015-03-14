@@ -303,5 +303,15 @@ public class Picture extends SimplePicture {
 			}
 		}
 	}
+	
+	public void mirrorHorizontal(){
+		Pixel[][] pixels = this.getPixels2D();
+		Pixel topPixel = null;
+		Pixel bottomPixel = null;
+		int height = pixels.length;
+		for (int column = 0; column < pixels.length; column ++;){
+			for (int row = 0; row < height.)
+		}
+	}
 
 } // this } is the end of class Picture, put all new methods before this
