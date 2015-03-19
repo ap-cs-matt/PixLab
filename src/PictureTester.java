@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 
 
 /**
@@ -25,6 +27,12 @@ public class PictureTester
 	    caterpillar.explore();
 	    caterpillar.mirrorHorizontal();
 	    caterpillar.explore();
+  }
+  public static void testChroma(){
+	  Picture chroma = new Picture("chroma.jpg");
+	  chroma.explore();
+	  chroma.chroma(new Picture("sky.jpg"), new Color(96,164,79) , 30);
+	  chroma.explore();
   }
   
   public static void testMirrorArms(){
@@ -134,6 +142,13 @@ public class PictureTester
     swan.explore();
   }
   
+  public static void testMirrorDiagonal(){
+	  Picture beach = new Picture ("beach.jpg");
+	  beach.explore();
+	  beach.MirrorDiagonal();
+	  beach.explore();
+  }
+  
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -155,12 +170,12 @@ public class PictureTester
     //testMirrorTemple();				//done
     //testMirrorArms();					//done
     //testMirrorGull();					//done
-    //testMirrorDiagonal();
+    //testMirrorDiagonal();					
     //testCollage();
     //testCopy();
-    //testEdgeDetection();
-    testEdgeDetection2();
-    //testChromakey();
+    //testEdgeDetection();				//done
+    //testEdgeDetection2();				//not done
+    testChroma();						//done
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
     //testSetRedToHalfValueInTopHalf();
