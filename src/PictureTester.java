@@ -19,6 +19,36 @@ public class PictureTester
     beach.explore();
   }
   
+  public static void testMirrorHorizontal (){
+	  
+	  Picture caterpillar = new Picture("redMotorcycle.jpg");
+	    caterpillar.explore();
+	    caterpillar.mirrorHorizontal();
+	    caterpillar.explore();
+  }
+  
+  public static void testMirrorArms(){
+	  Picture caterpillar = new Picture("snowman.jpg");
+	    caterpillar.explore();
+	    caterpillar.mirrorArms();
+	    caterpillar.explore();
+  }
+  
+  public static void testMirrorGull(){
+	  Picture gull = new Picture("seagull.jpg");
+	    //gull.explore();
+	    gull.mirrorGull();
+	    gull.explore();
+  }
+  
+  public static void testMirrorBotToTop(){
+	
+	  	Picture caterpillar = new Picture("redMotorcycle.jpg");
+	    caterpillar.explore();
+	    caterpillar.mirrorBotToTop();
+	    caterpillar.explore();
+  }
+  
   public static void testKeepOnlyBlue(){
 	  Picture beach = new Picture("beach.jpg");  
 	  beach.keepOnlyBlue();
@@ -46,18 +76,21 @@ public class PictureTester
 	  beach.explore();
   }
   
+  
+  
   public static void testFixUnderwater(){
 	 Picture Water = new Picture ("water.jpg");
+	 Water.explore();
 	 Water.fixUnderwater();
 	 Water.explore();
   }
   
   /** Method to test mirrorVertical */
-  public static void testMirrorVerticalLeftToRight()
+  public static void testMirrorVerticalRightToLeft()
   {
     Picture caterpillar = new Picture("caterpillar.jpg");
     caterpillar.explore();
-    caterpillar.mirrorVertical();
+    caterpillar.mirrorVerticalRightToLeft();
     caterpillar.explore();
   }
   public static void testMirrorVertical()
@@ -88,6 +121,15 @@ public class PictureTester
   public static void testEdgeDetection()
   {
     Picture swan = new Picture("swan.jpg");
+    swan.explore();
+    swan.edgeDetection(10);
+    swan.explore();
+  }
+  
+  public static void testEdgeDetection2()
+  {
+    Picture swan = new Picture("swan.jpg");
+    swan.explore();
     swan.edgeDetection(10);
     swan.explore();
   }
@@ -99,23 +141,25 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    //testZeroBlue();			//Done
-    //testKeepOnlyBlue();		//Done
-    //testKeepOnlyRed();		//Done
-    //testKeepOnlyGreen();		//Done
-    //testNegate();				//Done
-    //testGrayscale();			//Done
-    //testFixUnderwater();		//Done
-    //testMirrorVertical();
-    testMirrorVerticalLeftToRight();
-    //testMirrorTemple();
-    //testMirrorArms();
-    //testMirrorGull();
+    //testZeroBlue();					//Done
+    //testKeepOnlyBlue();				//Done
+    //testKeepOnlyRed();				//Done
+    //testKeepOnlyGreen();				//Done
+    //testNegate();						//Done
+    //testGrayscale();					//Done
+    //testFixUnderwater();				//Done
+    //testMirrorVertical();				//Done
+    //testMirrorVerticalRightToLeft();	//Done
+    //testMirrorHorizontal();			//done
+    //testMirrorBotToTop();				//done
+    //testMirrorTemple();				//done
+    //testMirrorArms();					//done
+    //testMirrorGull();					//done
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
     //testEdgeDetection();
-    //testEdgeDetection2();
+    testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
