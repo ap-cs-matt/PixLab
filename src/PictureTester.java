@@ -175,7 +175,7 @@ public class PictureTester
     //testCopy();
     //testEdgeDetection();				//done
     //testEdgeDetection2();				//not done
-    testChroma();						//done
+    //testChroma();						//done
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
     //testSetRedToHalfValueInTopHalf();
